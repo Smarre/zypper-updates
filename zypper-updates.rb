@@ -14,6 +14,8 @@ update_status = hash["stream"]["update_status"]
 
 # If true, we have no updates for reason or another.
 if update_status["update_list"]["update"].nil?
+    out = { "update_amount" => 0 }
+    puts out.to_json
     exit 0
 end
 
