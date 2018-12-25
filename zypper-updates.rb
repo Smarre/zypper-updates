@@ -29,6 +29,7 @@ if updates > 0
     #out = { "update_amount" => updates, "updates" => {} }
     update_status["update_list"]["update"].each do |update|
         update["update_amount"] = updates
+        update_amount["update_list_id"] = id
         puts update.to_json
         #out["updates"][id] = update
         #id += 1
